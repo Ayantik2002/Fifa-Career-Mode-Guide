@@ -115,8 +115,7 @@ st.set_page_config(page_title="Fifa Career Mode Guide")
 custom_css = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url(https://images.pexels.com/photos/7130473/pexels-photo-7130473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size:cover;
+    background: linear-gradient(to bottom left, #5D79BA 40%, #FED5C9);
     color:#000;
 }
 [data-testid="baseButton-secondary"] {
@@ -130,6 +129,7 @@ custom_css = """
 
 
 # linear-gradient(to right, #87CEFA, #800080)
+# url(https://images.pexels.com/photos/7130473/pexels-photo-7130473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 st.title('FIFA 22 CAREER MODE GUIDE')
 
