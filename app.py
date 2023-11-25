@@ -23,21 +23,21 @@ def recommend(player):
     a_cnt = 0
 
     for i in player_list:
-        if a_cnt < 10 and i[1] < 50:
+        if a_cnt < 10 and i[1] < 40:
             most_alike.append([new_df.iloc[i[0]].short_name, new_df.iloc[i[0]].club_name,
                               new_df.iloc[i[0]].nationality_name, new_df.iloc[i[0]].player_positions, str(new_df.iloc[i[0]].overall)])
             a_cnt += 1
 
     for i in player_list:
-        if new_df.iloc[i[0]].value_eur > 70000000 and e_cnt < 5 and i[1] < 50:
+        if new_df.iloc[i[0]].value_eur > 70000000 and e_cnt < 5 and i[1] < 40:
             expensive.append([new_df.iloc[i[0]].short_name, new_df.iloc[i[0]].club_name,
                              new_df.iloc[i[0]].nationality_name, new_df.iloc[i[0]].player_positions, str(new_df.iloc[i[0]].overall)])
             e_cnt += 1
-        elif new_df.iloc[i[0]].value_eur <= 30000000 and c_cnt < 5 and i[1] < 50:
+        elif new_df.iloc[i[0]].value_eur <= 30000000 and c_cnt < 5 and i[1] < 40:
             cheap.append([new_df.iloc[i[0]].short_name, new_df.iloc[i[0]].club_name,
                          new_df.iloc[i[0]].nationality_name, new_df.iloc[i[0]].player_positions, str(new_df.iloc[i[0]].overall)])
             c_cnt += 1
-        elif m_cnt < 5 and i[1] < 50:
+        elif m_cnt < 5 and i[1] < 40:
             medium.append([new_df.iloc[i[0]].short_name, new_df.iloc[i[0]].club_name,
                           new_df.iloc[i[0]].nationality_name, new_df.iloc[i[0]].player_positions, str(new_df.iloc[i[0]].overall)])
             m_cnt += 1
@@ -119,7 +119,7 @@ custom_css = """
     color:#000;
 }
 [data-testid="baseButton-secondary"] {
-    color:#fff;
+    color:#ff4b4b;
 }
 [data-testid="stThumbValue"] {
     color:#fff;
