@@ -198,12 +198,15 @@ filtered_df = filtered_df[filtered_df['value_eur'] >= value_min_threshold*1e6]
 filtered_df = filtered_df[filtered_df['value_eur'] <= value_max_threshold*1e6]
 
 if st.button('Find'):
-    selected_attributes = ['short_name', 'club_name',
-                           'nationality_name', 'player_positions', 'overall']
-    for index, row in filtered_df[selected_attributes].iterrows():
-        row_string = ' | '.join(
-            [f"{row[attribute]}" for attribute in selected_attributes])
-        st.text(row_string)
+    if filtered_df.empty:
+        st.text("No Results. Please adjust the filter.")
+    else:
+        selected_attributes = ['short_name', 'club_name',
+                            'nationality_name', 'player_positions', 'overall']
+        for index, row in filtered_df[selected_attributes].iterrows():
+            row_string = ' | '.join(
+                [f"{row[attribute]}" for attribute in selected_attributes])
+            st.text(row_string)
 
 
 st.markdown("<hr>", unsafe_allow_html=True)
