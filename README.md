@@ -12,7 +12,7 @@ Try Online:
 Alternatively, you can try out the deployed version of the application [here](https://fifa-career-mode-guide-ayantik.streamlit.app/).
 
 Technologies Used:
-Python
+Python,
 Streamlit
 
 Disclaimer:
